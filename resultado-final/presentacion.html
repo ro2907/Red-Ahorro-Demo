@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/signin.css">
+</head>
+<body >
+    <div style=" height: 100vh; background-color: var(--clr-main); display: flex; justify-content: center; align-items: center;" id="logoContainer">
+        <img style="display: block; width: 80%;" src="/resultado-final/img/logo-presentacion.png" alt="">  
+    </div>
+   <!-- sign in -->
+   <div class="container"id="signinContainer" style="display: none;">
+    <div class="form-container" id="signInFormContainer">
+      <h2>Iniciar Sesión</h2>
+      <form id="signInForm" action="index.html" method="GET">
+        <label for="emailSignIn">Correo:</label>
+        <input type="email" id="emailSignIn" name="emailSignIn" required>
+
+        <label for="passwordSignIn">Contraseña:</label>
+        <input type="password" id="passwordSignIn" name="passwordSignIn" required>
+
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <p class="toggle-form">¿No tienes una cuenta? <a href="#" id="toggleSignUp">Regístrate aquí</a>.</p>
+    </div>
+
+    <div class="form-container" id="signUpFormContainer" style="display: none;">
+      <h2>Registrarse</h2>
+      <form id="signUpForm">
+        <label for="nameSignUp">Nombre:</label>
+        <input type="text" id="nameSignUp" name="nameSignUp" required>
+
+        <label for="emailSignUp">Correo:</label>
+        <input type="email" id="emailSignUp" name="emailSignUp" required>
+
+        <label for="phoneSignUp">Teléfono:</label>
+        <input type="tel" id="phoneSignUp" name="phoneSignUp" required>
+
+        <p class="password-message">La contraseña se enviará al correo.</p>
+
+        <button type="submit">Registrarse</button>
+      </form>
+      <p class="toggle-form">¿Ya tienes una cuenta? <a href="#" id="toggleSignIn">Inicia sesión aquí</a>.</p>
+    </div>
+  </div>
+
+  <script src="./js/signin.js"></script>
+    
+</body>
+</html>
