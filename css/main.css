@@ -442,6 +442,9 @@ main {
     .contenedor-productos {
         grid-template-columns: 1fr 1fr;
     }
+    .producto {
+        width: 150px;
+    }
 }
 
 @media screen and (max-width: 600px) {

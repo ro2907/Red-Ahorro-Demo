@@ -1,168 +1,53 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Para iOS -->
-<link rel="apple-touch-icon" sizes="180x180" href="/resultado-final/img/LogoGrande.jpeg">
-
-<!-- Para otros dispositivos (favicon) -->
-<link rel="icon" type="image/png" sizes="32x32" href="/resultado-final/img/logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/resultado-final/img/logo.png">
-    <title>RED AHORRO</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Document</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/signin.css">
 </head>
-<body>
+<body >
+    <div style=" height: 100vh; background-color: var(--clr-main); display: flex; justify-content: center; align-items: center;" id="logoContainer">
+        <img style="display: block; width: 80%;" src="/resultado-final/img/logo-presentacion.png" alt="">  
+    </div>
+   <!-- sign in -->
+   <div class="container"id="signinContainer" style="display: none;">
+    <div class="form-container" id="signInFormContainer">
+      <h2>Iniciar Sesión</h2>
+      <form id="signInForm" action="home.html" method="GET">
+        <label for="emailSignIn">Correo:</label>
+        <input type="email" id="emailSignIn" name="emailSignIn" required>
 
-    <div class="wrapper">
-        <header class="header-mobile fijo" style="background-color: var(--clr-main);">
-            <h1 class="logo"><span style="font-weight: 400; border: 2px solid var(--clr-gray);padding: 0px 3px; margin-right: 3px;">RED</span>AHORRO</h1>
-            <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>
-            </button>
-        </header>
-        <aside>
-            <button class="close-menu" id="close-menu">
-                <i class="bi bi-x"></i>
-            </button>
-            <header>
-                <h1 class="logo"><span style="font-weight: 400; border: 2px solid var(--clr-gray);padding: 0px 3px; margin-right: 3px;">RED</span>AHORRO</h1>
-            </header>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los Decuentos</button>
-                    </li>
-                    <li>
-                        <button id="abrigos2" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Categorías</button>
-                        <ul class="submenu">
-                          <li><a href="#" class="submenu-items">Construcción</a></li>
-                          <li><a href="#" class="submenu-items">Bienestar</a></li>
-                          <li><a href="#" class="submenu-items">Entretenimiento</a></li>
-                          <li><a href="#" class="submenu-items">Comestibles</a></li>
-                          <li><a href="#" class="submenu-items">Gastronomia</a></li>
-                          <li><a href="#" class="submenu-items">Indumentaria</a></li>
-                          <li><a href="#" class="submenu-items">Electrónica</a></li>
-                          <li><a href="#" class="submenu-items">Impuestos</a></li>
-                          <li><a href="#" class="submenu-items">Promociones</a></li>
-                          
-                        </ul>
-                      </li>
-                    <li>
-                        <button id="camisetas" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Quienes somos</button>
-                    </li>
-                    <li>
-                        <button id="pantalones" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Promocionar Aquí</button>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="./carrito.html">
-                            <i class="bi bi-cart-fill"></i> Descuentos Guardados <span id="numerito" class="numerito">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="texto-footer">© 2024 FARES fACTORY</p>
-            </footer>
-        </aside>
-        <div style="padding-top: 75px;"></div>
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSd9NN0ncLCnwgHyEsLOplmW_JaoGCkbdmyQ&usqp=CAU" style="width: 90%; margin-bottom: 15px;margin-left: 20px; border-radius: 20px;">
-        </div>
-    <div>
-        <h2 class="titulo-categoria contenedor">Categorías</h2>  
-        <div class="categorias-container">
-            
-            <div class="categoria shadow">
-            <a href="#" class="categoria-link">
-                <i class="fas fa-tools"></i>
-                <span>Construcción</span>
-            </a>
-            </div>
-            <div class="categoria shadow">
-                <a href="#" class="categoria-link">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Formación</span>
-                </a>
-                </div>
-            <div class="categoria shadow">
-                <a href="#" class="categoria-link">
-                    <i class="fas fa-heartbeat"></i>
-                    <span>Bienestar</span>
-                </a>
-                </div>
-                <div class="categoria shadow">
-                    <a href="#" class="categoria-link">
-                        <i class="fas fa-film"></i>
-                        <span>Entretenimiento</span>
-                    </a>
-                    </div>
-            <div class="categoria shadow">
-            <a href="#" class="categoria-link">
-                <i class="fas fa-medkit"></i>
-                <span>Salud</span>
-            </a>
-            </div>
-            <div class="categoria shadow">
-                <a href="#" class="categoria-link">
-                  <i class="fas fa-shopping-basket"></i>
-                  <span>Comestibles</span>
-                </a>
-              </div>
-              
-              <div class="categoria shadow">
-                <a href="#" class="categoria-link">
-                  <i class="fas fa-cocktail"></i>
-                  <span>Gastronomía</span>
-                </a>
-              </div>
-              
-              <div class="categoria shadow">
-                <a href="#" class="categoria-link">
-                  <i class="fas fa-tshirt"></i>
-                  <span>Indumentaria</span>
-                </a>
-              </div>
-              
-              <div class="categoria shadow">
-                <a href="#" class="categoria-link">
-                  <i class="fas fa-mobile-alt"></i>
-                  <span>Electrónica</span>
-                </a>
-              </div>
-              
-              <div class="categoria shadow">
-                <a href="#" class="categoria-link">
-                  <i class="fas fa-file-invoice-dollar"></i>
-                  <span>Impuestos</span>
-                </a>
-              </div>
-              
-              <div class="categoria categoria-big shadow">
-                <a href="#" class="categoria-link">
-                  <i class="fas fa-tags"></i>
-                  <span>Promociones</span>
-                </a>
-              </div>
-        </div> 
+        <label for="passwordSignIn">Contraseña:</label>
+        <input type="password" id="passwordSignIn" name="passwordSignIn" required>
+
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <p class="toggle-form">¿No tienes una cuenta? <a href="#" id="toggleSignUp">Regístrate aquí</a>.</p>
     </div>
-    <div>
-        <a href="#"><img src="./img/sorteo.png" alt="" style="width: 100%;padding-bottom: 30px;"></a>
+
+    <div class="form-container" id="signUpFormContainer" style="display: none;">
+      <h2>Registrarse</h2>
+      <form id="signUpForm">
+        <label for="nameSignUp">Nombre:</label>
+        <input type="text" id="nameSignUp" name="nameSignUp" required>
+
+        <label for="emailSignUp">Correo:</label>
+        <input type="email" id="emailSignUp" name="emailSignUp" required>
+
+        <label for="phoneSignUp">Teléfono:</label>
+        <input type="tel" id="phoneSignUp" name="phoneSignUp" required>
+
+        <p class="password-message">La contraseña se enviará al correo.</p>
+
+        <button type="submit">Registrarse</button>
+      </form>
+      <p class="toggle-form">¿Ya tienes una cuenta? <a href="#" id="toggleSignIn">Inicia sesión aquí</a>.</p>
     </div>
-        <main>
-            <h2 class="titulo-principal" id="titulo-principal">Destacados</h2>
-            <div id="contenedor-productos" class="contenedor-productos">
-                <!-- Esto se va a rellenar con JS -->
-            </div>
-        </main>
-    </div>
+  </div>
+
+  <script src="./js/signin.js"></script>
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/menu.js"></script>
 </body>
 </html>
