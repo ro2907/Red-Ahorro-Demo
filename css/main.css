@@ -290,7 +290,6 @@ main {
 .producto-detalles {
     background-color: var(--clr-white1);
     color: #2b2a2a;
-    /* border: 1px solid #2b2a2a; */
     padding: .5rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
