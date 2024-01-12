@@ -442,10 +442,7 @@ main {
     .contenedor-productos {
         grid-template-columns: 1fr 1fr;
     }
-    .producto {
-        width: 200px;
-         
-    }
+   
 }
 
 @media screen and (max-width: 600px) {
@@ -485,7 +482,7 @@ main {
     }
 
     .contenedor-productos {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .header-mobile {
@@ -535,8 +532,3 @@ main {
 
 
 
-@media screen and (max-width: 400px) {
-    .contenedor-productos {
-        grid-template-columns: 1fr;
-    }
-}
